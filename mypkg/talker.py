@@ -6,7 +6,7 @@ def cb(request, response):
     if request.name == "上田隆一":
         response.age = 44
     else:
-        response.age = 255
+        response.age = 25
     
     return response
 
