@@ -10,7 +10,7 @@ def main():
         node.get_logger().info('待機中')
 
     req = Query.Request()
-    req.name = "四季"
+    req.season = "四季"
     future = client.call_async(req)
 
     while rclpy.ok():
@@ -21,7 +21,7 @@ def main():
             except:
                 node.get_logger().info('呼び出し失敗')
             else:
-                node.get_logger().info("\nseason: {}".format(response.season))
+                node.get_logger().info("\n春:{}\n夏:{}\n秋:{}\n冬:{}\n".format(response.spring, response.summer, response.fall, response.winter))
             
             break
     node.destroy_node()
