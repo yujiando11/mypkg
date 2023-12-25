@@ -1,9 +1,11 @@
+# SPDX-FileCopyrightText: 2023 yujiando11
+# SPDX-License-Identifier: BSD-3-Clause
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int16
 
 def cb(msg):
-    node.get_logger().info("Listen: %d" % msg.data)
+    node.get_logger().info("%d s" % msg.data)
     
 rclpy.init()
 node = Node("listener")
