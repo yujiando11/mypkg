@@ -44,7 +44,7 @@ $ cd src/
 
 ### 当リポジトリをクローンする
 ```
-$ git clone ~~~
+$ git clone git@github.com:yujiando11/mypkg.git 
 ```
 
 ### ワークスペースに移動し、ビルドする
