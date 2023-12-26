@@ -1,6 +1,6 @@
 # mypkg
 
-ROS2のパッケージ
+ROS 2のパッケージ
 
 [![test](https://github.com/yujiando11/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/yujiando11/mypkg/actions/workflows/test.yml)
 
@@ -25,7 +25,7 @@ ROS2のパッケージ
 
 
 ## ダウンロード方法
-* ROS2がインストールされている環境を準備してください
+* ROS 2がインストールされている環境を準備してください
 
 ### ホームディレクトリでワークスペースを作成する
 ```
@@ -64,27 +64,38 @@ source ~/ros2_ws/install/setup.bash
 source ~/ros2_ws/install/local_setup.bash
 ```
 
+### ソースする
+```
+$ source ~/.bashrc
+```
+
+
 ## 実行方法1
 * `ros2 run`で実行する
     * 端末を2つ用意する
+    * 動作の停止は`Ctrl+C`
 
 ```
 端末1 $ ros2 run mypkg talker
+(なにも表示されません)
+
 端末2 $ ros2 run mypkg listener
 [INFO] [1703141713.490386542] [listener]: 0 s
 [INFO] [1703141714.477060126] [listener]: 1 s
 [INFO] [1703141715.477431162] [listener]: 2 s
 [INFO] [1703141716.477034609] [listener]: 3 s
 [INFO] [1703141717.476984585] [listener]: 4 s
-[INFO] [1703141718.477023733] [listener]: 5 s 
+[INFO] [1703141718.477023733] [listener]: 5 s
+・・・ 
+Ctrl+C
 ```
 
 ## 実行方法2
 * `ros2 launch`で実行する
     * 端末を1つ用意する
-
+    * 動作の停止は`Ctrl+C`
 ```
-$ ros2 launch mypkg talk_listen.launch.py
+端末1$ ros2 launch mypkg talk_listen.launch.py
 [INFO] [launch]: All log files can be found below /home/ando/.ros/log/2023-12-21-16-03-22-329880-LAPTOP-30H05QRF-1528
 [INFO] [launch]: Default logging verbosity is set to INFO
 [INFO] [talker-1]: process started with pid [1530]
@@ -95,6 +106,8 @@ $ ros2 launch mypkg talk_listen.launch.py
 [listener-2] [INFO] [1703142206.900088615] [listener]: 3 s
 [listener-2] [INFO] [1703142207.900285177] [listener]: 4 s
 [listener-2] [INFO] [1703142208.900146352] [listener]: 5 s
+・・・
+Ctrl+C
 ```
 
 ## 必要なソフトウェア
@@ -103,7 +116,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ## テスト環境
 * Ubuntu 20.04
-* ROS2 foxy
+* ROS 2 foxy
 
 ## 著作権・ライセンス
 * このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
