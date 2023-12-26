@@ -45,16 +45,24 @@ $ cd src/
 
 ### 当リポジトリをクローンする
 ```
-$ git clone git@github.com:yujiando11/mypkg.git 
+$ git clone https://github.com/yujiando11/mypkg.git 
 ```
 
 ### ワークスペースに移動し、ビルドする
 ```
 $ cd ~/ros2_ws/
 $ colcon build
-$ source ~/.bashrc
 ```
 
+### 当リポジトリを利用可能にする
+```
+$ vi ~/.bashrc
+```
+* ~/.bashrcの末尾に以下の2行を追加する
+```
+source ~/ros2_ws/install/setup.bash
+source ~/ros2_ws/install/local_setup.bash
+```
 
 ## 実行方法1
 * `ros2 run`で実行する
