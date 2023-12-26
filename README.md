@@ -4,6 +4,8 @@ ROS 2のパッケージ
 
 [![test](https://github.com/yujiando11/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/yujiando11/mypkg/actions/workflows/test.yml)
 
+* ROS 2がインストールされている環境を準備してください
+
 ## ノードの説明
 
 ### talker.py
@@ -21,53 +23,6 @@ ROS 2のパッケージ
 
 ### /countup
 * 16ビット符号つき整数のメッセージをやりとりするデータ
-
-
-
-## ダウンロード方法
-* ROS 2がインストールされている環境を準備してください
-
-### ホームディレクトリでワークスペースを作成する
-```
-$ mkdir ros2_ws
-```
-
-### ワークスペースに移動する
-```
-$ cd ros2_ws/
-```
-
-### ワークスペースでディレクトリを作成し、移動する
-```
-$ mkdir src
-$ cd src/
-```
-
-### 当リポジトリをクローンする
-```
-$ git clone https://github.com/yujiando11/mypkg.git 
-```
-
-### ワークスペースに移動し、ビルドする
-```
-$ cd ~/ros2_ws/
-$ colcon build
-```
-
-### 当リポジトリを利用可能にする
-```
-$ vi ~/.bashrc
-```
-* ~/.bashrcの末尾に以下の2行を追加する
-```
-source ~/ros2_ws/install/setup.bash
-source ~/ros2_ws/install/local_setup.bash
-```
-
-### ソースする
-```
-$ source ~/.bashrc
-```
 
 
 ## 実行方法1
