@@ -1,7 +1,7 @@
 # mypkg
 
 ROS2のパッケージ
-
+[![test](https://github.com/yujiando11/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/yujiando11/mypkg/actions/workflows/test.yml)
 
 ## ノードの説明
 
