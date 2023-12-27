@@ -7,7 +7,7 @@ from std_msgs.msg import Int16
 def cb(msg):
     node.get_logger().info("%3d s" % msg.data)
     if msg.data == 180:
-        node.get_logger().info("180秒経ちました")
+        node.get_logger().info("3分経ちました")
         rclpy.shutdown()
     
 rclpy.init()
