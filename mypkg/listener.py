@@ -5,7 +5,10 @@ from rclpy.node import Node
 from std_msgs.msg import Int16
 
 def cb(msg):
-    node.get_logger().info("%d s" % msg.data)
+    node.get_logger().info("%3d s" % msg.data)
+    if msg.data == 180:
+        node.get_logger().info("180秒経ちました")
+        rclpy.shutdown()
     
 rclpy.init()
 node = Node("listener")

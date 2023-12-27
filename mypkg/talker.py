@@ -7,7 +7,7 @@ from std_msgs.msg import Int16
 class Talker():
     def __init__(self, nh):
         self.pub = nh.create_publisher(Int16, "countup", 10)
-        self.n = 0
+        self.n = 1
         nh.create_timer(1.0, self.cb)
 
     def cb(self):
